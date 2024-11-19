@@ -1,0 +1,33 @@
+@url = http://localhost:8080
+
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgUXVpenplcyIsInN1YiI6ImFkbWluIiwiZXhwIjoxNzMyMDQ5MTI3fQ.V9e6qMHXGkq5iu3AhK3Uy7ED_WefVIsi-ehGIElgXMM
+
+###
+GET {{url}}/colaboradores
+Authorization: Bearer {{token}}
+
+###
+GET {{url}}/colaboradores/1
+Authorization: Bearer {{token}}
+
+###
+POST {{url}}/colaboradores
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "nome": "Nome XYZ"
+}
+
+###
+PUT {{url}}/colaboradores/1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "nome": "Título XYZ  - Alterado"
+}
+
+###
+DELETE {{url}}/colaboradores/2
+Authorization: Bearer {{token}}
